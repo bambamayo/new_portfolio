@@ -1,0 +1,33 @@
+.contact {
+  padding: $section-padding, 0;
+
+  &__details {
+    width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+
+    &-list {
+      &-item {
+        font-size: 2rem;
+        padding: 0.5rem;
+        color: $color-secondary;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        a,
+        a:visited,
+        a:link {
+          color: $color-secondary;
+          transition: 0.3s color ease-in-out;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-secondary-dark;
+          }
+        }
+      }
+    }
+  }
+}
