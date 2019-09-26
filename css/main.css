@@ -81,27 +81,27 @@ body {
 .contact {
   padding: 10rem 0; }
   .contact__details {
-    padding: 1.8rem;
-    width: 80rem;
+    padding: 2rem;
+    width: 60rem;
     margin: 0 auto;
     text-align: center;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
     .contact__details-list-item {
       font-size: 1.7rem;
       padding: 0.5rem;
-      color: #5069f5; }
+      color: #000; }
       .contact__details-list-item:not(:last-child) {
         margin-bottom: 1rem; }
       .contact__details-list-item a,
       .contact__details-list-item a:visited,
       .contact__details-list-item a:link {
-        color: #5069f5;
+        color: #000;
         transition: 0.3s color ease-in-out;
         text-decoration: none; }
         .contact__details-list-item a:hover,
         .contact__details-list-item a:visited:hover,
         .contact__details-list-item a:link:hover {
-          color: #0e2396; }
+          color: #000; }
 
 .footer {
   padding: 3rem 0 0 1rem; }
@@ -159,7 +159,7 @@ body {
         padding-bottom: 0.3rem;
         border-bottom: 0.1rem solid transparent;
         transition: 0.3s border-bottom-color ease-in-out; }
-        .header__nav-list-link-active, .header__nav-list-link:link-active, .header__nav-list-link:visited-active {
+        .header__nav-list-link:active, .header__nav-list-link:link:active, .header__nav-list-link:visited:active {
           border-bottom-color: #5069f5;
           color: #5069f5; }
         .header__nav-list-link:hover, .header__nav-list-link:link:hover, .header__nav-list-link:visited:hover {
