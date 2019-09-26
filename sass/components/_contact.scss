@@ -1,14 +1,16 @@
 .contact {
-  padding: $section-padding, 0;
+  padding: $section-padding 0;
 
   &__details {
+    padding: 1.8rem;
     width: 80rem;
     margin: 0 auto;
     text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba($color-primary, 0.5);
 
     &-list {
       &-item {
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 0.5rem;
         color: $color-secondary;
 

@@ -1,7 +1,30 @@
 .footer {
-  padding: 3rem 0 0 2rem;
+  padding: 3rem 0 0 1rem;
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    &-item {
+      font-size: 1.7rem;
+      padding: 1rem;
+
+      &-link {
+        &-1 {
+          color: #1da1f2;
+        }
+        &-2 {
+          color: #4078c0;
+        }
+        &-3 {
+          color: $color-primary;
+        }
+      }
+    }
+  }
   p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }

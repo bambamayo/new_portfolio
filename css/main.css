@@ -75,17 +75,19 @@ body {
 .about {
   padding: 10rem 0; }
   .about__text-container {
-    max-width: 90rem;
+    max-width: 70rem;
     margin: 0 auto; }
 
 .contact {
-  padding: 10rem, 0; }
+  padding: 10rem 0; }
   .contact__details {
+    padding: 1.8rem;
     width: 80rem;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); }
     .contact__details-list-item {
-      font-size: 2rem;
+      font-size: 1.7rem;
       padding: 0.5rem;
       color: #5069f5; }
       .contact__details-list-item:not(:last-child) {
@@ -102,10 +104,23 @@ body {
           color: #0e2396; }
 
 .footer {
-  padding: 3rem 0 0 2rem; }
+  padding: 3rem 0 0 1rem; }
+  .footer__links {
+    display: flex;
+    justify-content: center;
+    cursor: pointer; }
+    .footer__links-item {
+      font-size: 1.7rem;
+      padding: 1rem; }
+      .footer__links-item-link-1 {
+        color: #1da1f2; }
+      .footer__links-item-link-2 {
+        color: #4078c0; }
+      .footer__links-item-link-3 {
+        color: #000; }
   .footer p {
     text-align: center;
-    font-size: 1.6rem; }
+    font-size: 1.4rem; }
 
 .header {
   height: 100vh;
@@ -162,4 +177,4 @@ body {
     transform: translate(-50%, -50%); }
 
 .work {
-  padding: 10rem, 0; }
+  padding: 10rem 0; }
