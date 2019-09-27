@@ -1,8 +1,21 @@
 .about {
   padding: $section-padding 0;
 
+  @include respond(tab-port) {
+    padding: $section-padding-small 0;
+  }
+
   &__text-container {
-    max-width: 90rem;
+    max-width: 70rem;
     margin: 0 auto;
+
+    @include respond(tab-land) {
+      max-width: 60%;
+    }
+
+    @include respond(phone) {
+      max-width: 70%;
+      margin-left: 25%;
+    }
   }
 }

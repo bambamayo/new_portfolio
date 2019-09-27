@@ -1,16 +1,39 @@
 .contact {
-  padding: $section-padding, 0;
+  padding: $section-padding 0;
+
+  @include respond(tab-port) {
+    padding: $section-padding-small 0;
+  }
 
   &__details {
-    width: 80rem;
+    padding: 2rem;
+    width: 60rem;
     margin: 0 auto;
     text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba($color-primary, 0.5);
+
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      width: 60%;
+      padding: 0.5rem;
+    }
 
     &-list {
       &-item {
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 0.5rem;
-        color: $color-secondary;
+        color: $color-primary;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 1.4rem;
+        }
 
         &:not(:last-child) {
           margin-bottom: 1rem;
@@ -19,12 +42,20 @@
         a,
         a:visited,
         a:link {
-          color: $color-secondary;
+          color: $color-primary;
           transition: 0.3s color ease-in-out;
           text-decoration: none;
 
-          &:hover {
-            color: $color-secondary-dark;
+          &.twitter:hover {
+            color: #1da1f2;
+          }
+
+          &.github:hover {
+            color: #4078c0;
+          }
+
+          &.codepen:hover {
+            color: rgba($color-primary, 0.8);
           }
         }
       }

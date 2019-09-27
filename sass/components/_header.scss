@@ -6,6 +6,14 @@
   left: 0;
   top: 0;
 
+  @include respond(tab-port) {
+    width: 20%;
+  }
+
+  @include respond(phone) {
+    width: 15%;
+  }
+
   &__nav {
     height: 100%;
     width: 100%;
@@ -16,22 +24,50 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
 
       &-item {
         display: inline-block;
         width: 100%;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.1rem;
         font-size: 1.6rem;
-        padding: 0.5rem;
+        padding: 0.5rem 0;
         font-weight: 700;
-        margin-left: 5rem;
+        margin-left: 3rem;
+
+        @include respond(tab-land) {
+          margin-left: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+          margin-left: 1rem;
+        }
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+
+          letter-spacing: 0;
+        }
 
         & span {
           display: inline-block;
 
           &:not(:last-child) {
             margin-right: 0.3rem;
+
+            &:first-child {
+              @include respond(tab-port) {
+                margin-right: 0.1rem;
+              }
+
+              @include respond(phone) {
+                display: none;
+              }
+            }
+
+            @include respond(phone) {
+              margin-right: 0;
+            }
           }
         }
 
@@ -48,11 +84,12 @@
         border-bottom: 0.1rem solid transparent;
         transition: 0.3s border-bottom-color ease-in-out;
 
-        &-active {
+        &:active {
           border-bottom-color: $color-secondary;
           color: $color-secondary;
         }
-        &:hover {
+        &:hover,
+        &:focus {
           border-bottom-color: $color-secondary;
           color: $color-secondary;
         }
