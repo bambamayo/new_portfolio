@@ -1,6 +1,10 @@
 .contact {
   padding: $section-padding 0;
 
+  @include respond(tab-port) {
+    padding: $section-padding-small 0;
+  }
+
   &__details {
     padding: 2rem;
     width: 60rem;
@@ -8,11 +12,28 @@
     text-align: center;
     box-shadow: 0 0.5rem 1rem rgba($color-primary, 0.5);
 
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      width: 60%;
+      padding: 0.5rem;
+    }
+
     &-list {
       &-item {
         font-size: 1.7rem;
         padding: 0.5rem;
         color: $color-primary;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 1.4rem;
+        }
 
         &:not(:last-child) {
           margin-bottom: 1rem;
@@ -25,8 +46,16 @@
           transition: 0.3s color ease-in-out;
           text-decoration: none;
 
-          &:hover {
-            color: $color-primary;
+          &.twitter:hover {
+            color: #1da1f2;
+          }
+
+          &.github:hover {
+            color: #4078c0;
+          }
+
+          &.codepen:hover {
+            color: rgba($color-primary, 0.8);
           }
         }
       }

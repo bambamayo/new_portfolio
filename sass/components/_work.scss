@@ -1,3 +1,186 @@
 .work {
   padding: $section-padding 0;
+  // position: relative;
+  // z-index: 20;
+
+  @include respond(tab-port) {
+    padding: $section-padding-small 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100rem;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(tab-port) {
+      margin-left: 20%;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    &__container {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond(tab-land) {
+        flex-basis: 47%;
+      }
+
+      @include respond(phone) {
+        flex-basis: 60%;
+
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+
+  .project {
+    letter-spacing: 0.2rem;
+
+    @include respond(tab-land) {
+      letter-spacing: 0.1rem;
+    }
+    &-image {
+      width: 100%;
+      box-shadow: 0.5rem 0.5rem 1rem rgba($color-primary, 0.5);
+
+      &-image {
+        width: 100%;
+      }
+    }
+    &-header {
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      font-size: 2.1rem;
+      text-transform: capitalize;
+
+      @include respond(tab-land) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-stack-list {
+      display: flex;
+      font-size: 1.9rem;
+      justify-content: center;
+      margin: 1rem 0;
+      text-transform: capitalize;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
+
+      &-item {
+        padding: 0 1rem;
+
+        @include respond(phone) {
+          padding: 0 0.3rem;
+        }
+
+        &:not(:last-child) {
+          border-right: 0.2rem solid $color-primary;
+        }
+      }
+    }
+
+    &-info {
+      font-size: 1.7rem;
+      margin: 1rem 0;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+
+      &--toggle {
+        font-size: 1.7rem;
+        margin: 1rem 0;
+
+        @include respond(tab-land) {
+          font-size: 1.6rem;
+        }
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+        }
+
+        &-hide {
+          opacity: 0;
+          display: none;
+          transform: translateY(-20rem);
+          transition: 0.3s opacity ease-in;
+        }
+
+        &-show {
+          opacity: 1;
+          display: block;
+          transform: translateY(0);
+          transition: 0.3s opacity ease-in;
+        }
+      }
+
+      &--show,
+      &--hide {
+        padding-bottom: 0.3rem;
+        color: $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.4s ease-out;
+        text-transform: lowercase;
+      }
+    }
+
+    &-links {
+      display: flex;
+      font-size: 1.8rem;
+      justify-content: center;
+      margin: 1rem 0;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+
+      &-item {
+        padding: 0 1rem;
+
+        &-link,
+        &-link:visited {
+          color: $color-primary;
+          transition: 0.3s color ease-in-out;
+
+          &:hover,
+          &:focus {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
 }
