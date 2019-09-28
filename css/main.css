@@ -31,6 +31,10 @@ html {
     html {
       font-size: 50%; } }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
+
 body {
   box-sizing: border-box; }
 
@@ -294,7 +298,12 @@ body {
     transform: translate(-50%, -50%); }
 
 .work {
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  position: relative;
+  z-index: 20; }
+  @media (max-width: 75em) {
+    .work {
+      z-index: 2; } }
   @media (max-width: 56.25em) {
     .work {
       padding: 5rem 0; } }
