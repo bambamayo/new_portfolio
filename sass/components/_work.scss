@@ -1,7 +1,11 @@
 .work {
   padding: $section-padding 0;
-  // position: relative;
-  // z-index: 20;
+  position: relative;
+  z-index: 20;
+
+  @include respond(tab-land) {
+    z-index: 2;
+  }
 
   @include respond(tab-port) {
     padding: $section-padding-small 0;
