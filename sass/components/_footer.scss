@@ -25,6 +25,11 @@
           color: $color-primary;
         }
       }
+
+      &-icon {
+        height: 2rem;
+        width: 2rem;
+      }
     }
   }
   p {
@@ -36,3 +41,5 @@
     }
   }
 }
+
+//footer__links-item-icon

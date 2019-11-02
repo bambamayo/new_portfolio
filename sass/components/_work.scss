@@ -134,6 +134,12 @@
           font-size: 1.4rem;
         }
 
+        &-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: $color-secondary;
+        }
+
         &-hide {
           opacity: 0;
           display: none;
@@ -163,13 +169,8 @@
 
     &-links {
       display: flex;
-      font-size: 1.8rem;
       justify-content: center;
       margin: 1rem 0;
-
-      @include respond(tab-land) {
-        font-size: 1.6rem;
-      }
 
       &-item {
         padding: 0 1rem;
@@ -181,8 +182,13 @@
 
           &:hover,
           &:focus {
-            color: $color-secondary;
+            fill: $color-secondary;
           }
+        }
+        //"project-links-item-icon
+        &-icon {
+          height: 2rem;
+          width: 2rem;
         }
       }
     }
