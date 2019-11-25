@@ -125,6 +125,7 @@
       &--toggle {
         font-size: 1.7rem;
         margin: 1rem 0;
+        animation: showHidden 3s ease-in;
 
         @include respond(tab-land) {
           font-size: 1.6rem;
@@ -144,14 +145,12 @@
           opacity: 0;
           display: none;
           transform: translateY(-20rem);
-          transition: 0.3s opacity ease-in;
         }
 
         &-show {
           opacity: 1;
           display: block;
           transform: translateY(0);
-          transition: 0.3s opacity ease-in;
         }
       }
 
