@@ -10,7 +10,7 @@
     />
     <meta name="author" content="ayobami agunroye" />
     <title>Ayobami Agunroye | Frontend developer</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
@@ -24,32 +24,43 @@
   <body>
     <!-- header section -->
     <header class="header" id="#">
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-list-item">
-            <a class="header__nav-list-link" href="#"
+      <div class="header__bar">
+        <div class="header__bar-bar header__bar-bar--1"></div>
+        <div class="header__bar-bar header__bar-bar--2"></div>
+        <div class="header__bar-bar header__bar-bar--3"></div>
+      </div>
+    </header> 
+    <!-- end of header section -->
+    <!-- nav section -->
+      <nav class="nav">
+        <div class="nav__bar">
+          <div class="nav__bar-bar nav__bar-bar--1"></div>
+          <div class="nav__bar-bar nav__bar-bar--2"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-list-item nav-list-item--1">
+            <a class="nav-list-link" href="#"
               ><span>01</span><span>Home</span></a
             >
           </li>
-          <li class="header__nav-list-item">
-            <a class="header__nav-list-link" href="#about"
+          <li class="nav-list-item nav-list-item--2">
+            <a class="nav-list-link" href="#about"
               ><span>02</span><span>About</span></a
             >
           </li>
-          <li class="header__nav-list-item">
-            <a class="header__nav-list-link" href="#work"
+          <li class="nav-list-item nav-list-item--3">
+            <a class="nav-list-link" href="#work"
               ><span>03</span><span>Portfolio</span></a
             >
           </li>
-          <li class="header__nav-list-item">
-            <a class="header__nav-list-link" href="#contact"
+          <li class="nav-list-item nav-list-item--4">
+            <a class="nav-list-link" href="#contact"
               ><span>04</span><span>Contact</span></a
             >
           </li>
         </ul>
       </nav>
-    </header>
-    <!-- end of header section -->
+    <!-- end of nav section -->
 
     <!-- hero section -->
     <main>
@@ -68,17 +79,14 @@
         <h2 class="section-header">About me</h2>
         <div class="about__text-container">
           <p class="section-text">
-            Hi, my name is Ayobami Agunroye, a frontend developer who lives in
+            Hi, my name is Ayobami Agunroye, a frontend developer living in
             Lagos state, Nigeria. I have experience building the frontend of web
-            products using technologies such as html,css(scss),
-            javascript(reacts js, gatsby js, and a little bit of node js). But i
-            am open to learning new technologies if the need arises.
+            products using technologies such as html, css(scss),
+            javascript(reacts js, gatsby js), firebase and content management systems such as contentful. But i am open to learning new technologies if the need arises.
           </p>
           <p class="section-text">
-            I am currently only available for contract jobs and freelancing
-            opportunities. If you would like to contact me for any of these or
-            just to say hi please free to
-            <a to="/#contact" class="section-text--link">
+            I am currently available for full time job opportunities or contract jobs. If you would like to contact me for any of these or just to say hi please free to
+            <a href="/#contact" class="section-text--link">
               Contact me
             </a>.
           </p>
@@ -92,6 +100,43 @@
         <div class="work__info">
           <div class="work__info__container">
             <div class="project-image">
+              <img class="project-image-image" src="https://res.cloudinary.com/home-of-websites/image/upload/v1579618687/catar-photography_k3xarf.png" alt="catar photography screenshot"/>
+              <div>  
+              </div>
+            </div>
+            <div class="work__info-details">
+                <h2 class="project-header">Catar photography</h2>
+                <ul class="project-stack-list">
+                  <li class="project-stack-list-item">gatsby</li>
+                  <li class="project-stack-list-item">contentful</li>
+                  <li class="project-stack-list-item">reactjs</li>
+                  <li class="project-stack-list-item">graphql</li>
+                  <li class="project-stack-list-item">contentful</li>
+                </ul>
+                <p class="project-info">This a portfolio website built with gatsby js (a static site generator based on reactjs), contentful is used for storing data and scss for writing css. Client wanted something simple, elegant and fast so i opted to go with the JAMstack <span class="project-info--show">Read more  <svg class="project-info--toggle-icon">
+                    <use xlink:href="images/sprite.svg#icon-chevron-thin-down"></use>
+                  </svg></span></p>
+                <p class="project-info--toggle project-info--toggle-hide">The great advantage of using gatsby js was that it made the website very fast(since all my js code is complied to static html). Also one of the plugins (gatsby image) available makes gatsby js very ideal for use in building websites with lot of images since it helps with responsive images. <span class="project-info--hide">Read less <svg class="project-info--toggle-icon">
+                    <use xlink:href="images/sprite.svg#icon-chevron-thin-up"></use>
+                  </svg></span></p>
+                <ul class="project-links">
+                  <li class="project-links-item">
+                    <a class="project-links-item-link" href="https://catarphotography.com">
+                      <svg class="project-links-item-icon">
+                        <use xlink:href="images/sprite.svg#icon-globe"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="project-links-item">
+                    <a class="project-links-item-link" href="https://github.com/bambamayo/catar-photography">
+                      <svg class="project-links-item-icon"><use xlink:href="images/sprite.svg#icon-github"></use></svg>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="work__info__container">
+            <div class="project-image">
               <img class="project-image-image" src="https://res.cloudinary.com/home-of-websites/image/upload/v1569515098/acme_lruvsm.png" alt="acme watches screenshot"/>
               <div>  
               </div>
@@ -103,7 +148,7 @@
                   <li class="project-stack-list-item">firebase</li>
                   <li class="project-stack-list-item">scss</li>
                 </ul>
-                <p class="project-info">This is an ecommerce web application for a fictional wrist watch company. This web application was built with the javascript frontend library (react js), css was written with the (scss) css framework and firebase was used for the storing data.<span class="project-info--show">Read more  <svg class="project-info--toggle-icon">
+                <p class="project-info">This is an ecommerce web application for a fictional wrist watch company. This web application was built with the javascript frontend library (react js), css was written with the (scss) css framework and firebase was used for storing data. <span class="project-info--show">Read more  <svg class="project-info--toggle-icon">
                     <use xlink:href="images/sprite.svg#icon-chevron-thin-down"></use>
                   </svg></span></p>
                 <p class="project-info--toggle project-info--toggle-hide">App data was fetched from firebase using the axios javascript package, also, state in the web app is handled with the context api, which helps with handling global state and also the web app is responsive for all screen sizes.I built this web app to enable me understand the react js library more. <span class="project-info--hide">Read less <svg class="project-info--toggle-icon">
@@ -139,10 +184,10 @@
                   <li class="project-stack-list-item">scss</li>
                   <li class="project-stack-list-item">javascript</li>
                 </ul>
-                <p class="project-info">My portfolio website built with html, the scss css framework and javascript. I decided against using react js or any other frontend framework because i wanted something simple..<span class="project-info--show">Read more  <svg class="project-info--toggle-icon">
+                <p class="project-info">My portfolio website built with html, the scss css framework and javascript. I decided against using react js or any other frontend framework because i wanted to do some dom manipulation practice. <span class="project-info--show">Read more  <svg class="project-info--toggle-icon">
                     <use xlink:href="images/sprite.svg#icon-chevron-thin-down"></use>
                   </svg></span></p>
-                <p class="project-info--toggle project-info--toggle-hide">The website is fully responsive and works well on all devices i have been able to test it on. Also i used scss to write my css because it makes writing css more fun with its different functionalities.
+                <p class="project-info--toggle project-info--toggle-hide">The website is fully responsive and works well on all devices i have been able to test it on. Also i used scss to write my css because it makes writing css more fun with its different inbuilt functionalities.
                   <span class="project-info--hide">Read less <svg class="project-info--toggle-icon">
                     <use xlink:href="images/sprite.svg#icon-chevron-thin-up"></use>
                   </svg></span></p>
@@ -190,12 +235,6 @@
                             <use xlink:href="images/sprite.svg#icon-github"></use>
                         </svg> github</a>
                     </li>
-                    <li class="contact__details-list-item">
-                        <a class="codepen" target="_blank" href="https://twitter.com/agunroye_">
-                          <svg class="contact__details-list-icon">
-                              <use xlink:href="images/sprite.svg#icon-codepen"></use>
-                          </svg> codepen</a>
-                      </li>
                   </ul>
         </div>
        
@@ -214,11 +253,7 @@
               <use xlink:href="images/sprite.svg#icon-github"></use>
           </svg>
         </a></li>
-        <li class="footer__links-item"><a target="_blank" class="footer__links-item-link footer__links-item-link-3">
-            <svg class="footer__links-item-icon">
-                <use xlink:href="images/sprite.svg#icon-codepen"></use>
-            </svg></a>
-        </a></li>
+        
       </ul>
       <p>&copy;ayobami agunroye 2019</p>
     </footer>
