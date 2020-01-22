@@ -1,54 +1,28 @@
 .work {
   padding: $section-padding 0;
-  position: relative;
-  z-index: 20;
-
-  @include respond(tab-land) {
-    z-index: 2;
-  }
 
   @include respond(tab-port) {
     padding: $section-padding-small 0;
   }
 
   &__info {
-    display: flex;
-    justify-content: space-between;
-    width: 100rem;
+    display: grid;
+    width: 114rem;
+    max-width: 80%;
     margin: 0 auto;
-
-    @include respond(tab-land) {
-      width: 70%;
-    }
-
-    @include respond(tab-port) {
-      margin-left: 20%;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 5rem 3rem;
 
     @include respond(phone) {
-      width: 80%;
-      flex-wrap: wrap;
-      margin: 0 auto;
-      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 6rem;
     }
 
     &__container {
-      flex-basis: 45%;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      @include respond(tab-land) {
-        flex-basis: 47%;
-      }
-
-      @include respond(phone) {
-        flex-basis: 60%;
-
-        &:not(:last-child) {
-          margin-bottom: 5rem;
-        }
-      }
     }
   }
 
@@ -59,11 +33,11 @@
       letter-spacing: 0.1rem;
     }
     &-image {
-      width: 100%;
+      max-width: 100%;
       box-shadow: 0.5rem 0.5rem 1rem rgba($color-primary, 0.5);
 
       &-image {
-        width: 100%;
+        max-width: 100%;
       }
     }
     &-header {
