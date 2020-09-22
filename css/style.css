@@ -194,25 +194,6 @@ body {
 
 .footer {
   padding: 3rem 0 0 1rem; }
-  .footer__links {
-    display: flex;
-    justify-content: center;
-    cursor: pointer; }
-    .footer__links-item {
-      font-size: 1.7rem;
-      padding: 1rem; }
-      @media (max-width: 56.25em) {
-        .footer__links-item {
-          font-size: 1.4rem; } }
-      .footer__links-item-link-1 {
-        color: #1da1f2; }
-      .footer__links-item-link-2 {
-        color: #4078c0; }
-      .footer__links-item-link-3 {
-        color: #000; }
-      .footer__links-item-icon {
-        height: 2rem;
-        width: 2rem; }
   .footer p {
     text-align: center;
     font-size: 1.4rem; }
@@ -282,7 +263,8 @@ body {
       height: 0.2rem;
       width: 3rem;
       background-color: #fff;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      border-radius: 0.5rem; }
       .nav__bar-bar--1 {
         transform: rotate(-45deg) translate(-2px, 3px); }
         @media (max-width: 75em) {
