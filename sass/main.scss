@@ -1,3 +1,4 @@
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 @import "base/animations";
@@ -10,6 +11,7 @@
 @import "components/footer";
 @import "components/header";
 @import "components/hero";
+@import "components/nav";
 @import "components/work";
 
 @import "pages/home";

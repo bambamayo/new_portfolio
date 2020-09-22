@@ -1,3 +1,169 @@
 .work {
   padding: $section-padding 0;
+
+  @include respond(tab-port) {
+    padding: $section-padding-small 0;
+  }
+
+  &__info {
+    display: grid;
+    width: 114rem;
+    max-width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 5rem 3rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+    }
+
+    &__container {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .project {
+    letter-spacing: 0.2rem;
+
+    @include respond(tab-land) {
+      letter-spacing: 0.1rem;
+    }
+    &-image {
+      max-width: 100%;
+      box-shadow: 0.5rem 0.5rem 1rem rgba($color-primary, 0.5);
+
+      &-image {
+        max-width: 100%;
+      }
+    }
+    &-header {
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      font-size: 2.1rem;
+      text-transform: capitalize;
+
+      @include respond(tab-land) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-stack-list {
+      display: flex;
+      font-size: 1.9rem;
+      justify-content: center;
+      margin: 1rem 0;
+      text-transform: capitalize;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.5rem;
+      }
+
+      &-item {
+        padding: 0 1rem;
+
+        @include respond(phone) {
+          padding: 0 0.3rem;
+        }
+
+        &:not(:last-child) {
+          border-right: 0.2rem solid $color-primary;
+        }
+      }
+    }
+
+    &-info {
+      font-size: 1.7rem;
+      margin: 1rem 0;
+
+      @include respond(tab-land) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+
+      &--toggle {
+        font-size: 1.7rem;
+        margin: 1rem 0;
+        animation: showHidden 3s ease-in;
+
+        @include respond(tab-land) {
+          font-size: 1.6rem;
+        }
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+        }
+
+        &-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: $color-secondary;
+        }
+
+        &-hide {
+          opacity: 0;
+          display: none;
+          transform: translateY(-20rem);
+        }
+
+        &-show {
+          opacity: 1;
+          display: block;
+          transform: translateY(0);
+        }
+      }
+
+      &--show,
+      &--hide {
+        padding-bottom: 0.3rem;
+        color: $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.4s ease-out;
+        text-transform: lowercase;
+      }
+    }
+
+    &-links {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+
+      &-item {
+        padding: 0 1rem;
+
+        &-link,
+        &-link:visited {
+          color: $color-primary;
+          transition: 0.3s color ease-in-out;
+
+          &:hover,
+          &:focus {
+            fill: $color-secondary;
+          }
+        }
+        //"project-links-item-icon
+        &-icon {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
 }
